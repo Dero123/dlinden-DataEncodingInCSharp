@@ -9,7 +9,7 @@ public class Cipher
     /// <param name="shift">The amount to shift to be applied during encryption and decryption</param>
     public Cipher(int shift)
     {
-        this.shift = shift;
+        this.shift = shift + 3;
     }
 
     /// <summary>
@@ -35,6 +35,7 @@ public class Cipher
         {
             //TODO: The following copies the message character by character.
             //      Instead, you should to encrypt each character using the shift
+            int shift;
             newMessage += c;
         }
         return newMessage;
